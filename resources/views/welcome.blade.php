@@ -71,7 +71,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="{{route('home')}}" class="logo">
                             <img src="{{ asset('logo1.jpg') }}" width="30px" height="125px" alt="">
                         </a>
                         <!-- ***** Logo End ***** -->
