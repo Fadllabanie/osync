@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Subcategory;
+use App\Models\SubCategory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class SubcategoryFactory extends Factory
+class SubCategoryFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Subcategory::class;
+    protected $model = SubCategory::class;
 
     /**
      * Define the model's default state.
