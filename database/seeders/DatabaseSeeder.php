@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
   public function run()
   {
     Category::factory(5)->create()->each(function ($data) {
-      Subcategory::factory($data)->count(2)->create([
+      SubCategory::factory($data)->count(2)->create([
         'category_id' => $data->id,
       ]);
     });
