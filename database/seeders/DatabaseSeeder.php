@@ -20,7 +20,7 @@ use App\Models\Product;
 use App\Models\Profile;
 use App\Models\ProfileLink;
 use App\Models\ProfilePortFolio;
-use App\Models\Subcategory;
+use App\Models\SubCategory;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
