@@ -20,7 +20,7 @@ class CreateCardsTable extends Migration
             $table->unsignedBigInteger('client_id')->index()->nullable();
             $table->string('name')->nullable();
             $table->unsignedBigInteger('category_id')->index();
-            $table->unsignedBigInteger('subcategory_id')->index();
+            $table->unsignedBigInteger('sub_category_id')->index();
             $table->unsignedBigInteger('admin_id')->index()->nullable();
             $table->unsignedBigInteger('manger_id')->index()->nullable();
             $table->unsignedBigInteger('origin_id')->index();
@@ -30,7 +30,7 @@ class CreateCardsTable extends Migration
 
             $table->foreign('client_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('admin_id')->references('id')->on('admins')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('manger_id')->references('id')->on('admins')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('origin_id')->references('id')->on('origins')->onUpdate('cascade')->onDelete('cascade');
