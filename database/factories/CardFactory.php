@@ -26,7 +26,7 @@ class CardFactory extends Factory
             'token' => Str::random(10),
             'code' =>   generateRandomCode('pro'),
             'category_id' => $this->faker->randomElement([1, 2, 3]),
-            'subcategory_id' => $this->faker->randomElement([1, 2, 3]),
+            'sub_category_id' => $this->faker->randomElement([1, 2, 3]),
             'admin_id' => $this->faker->randomElement([1]),
             'manger_id' => $this->faker->randomElement([1]),
             'origin_id' => $this->faker->randomElement([1]),
