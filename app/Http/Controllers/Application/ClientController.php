@@ -14,13 +14,16 @@ use App\Http\Requests\Web\Profile\CheckCodeRequest;
 class ClientController extends Controller
 {
 
-    public function start()
+    public function start($card_token)
     {
+      
         return view('application.start');
     }
+
     public function check(CheckCodeRequest $request)
     {
         $card =  Card::where('token', $request->token)->where('code', $request->code)->firstOrFail();
+       
         $profile = Profile::first();
 
         return view('application.create', compact('card', 'profile'));
@@ -34,7 +37,7 @@ class ClientController extends Controller
 
         Alert::success('SuccessAlert', 'Lorem ipsum dolor sit amet.');
 
-        return redirect()->route('home.profile');
+        return redirect()->route('home.profile.show');
     }
 
     public function show()
@@ -42,19 +45,33 @@ class ClientController extends Controller
         $profile = Profile::where('id', 1)->first();
         $card =  Card::where('category_id', $profile->category_id)->firstOrFail();
 
-        switch ($card->category_id) {
-            case '1':
+        ## check <----
+
+        // switch ($card->category_id) {
+        //     case '1':
+        //         return view('vCards.demo1', compact('profile'));
+        //         break;
+        //     case '2':
+        //         return view('vCards.demo6', compact('profile'));
+        //         break;
+        //     case '3':
+        //         return view('vCards.demo3', compact('profile'));
+        //         break;
+        // }
+        
+        switch ($profile->type) {
+            case 'adult':
                 return view('vCards.demo1', compact('profile'));
                 break;
-            case '2':
-                return view('vCards.demo3', compact('profile'));
+            case 'child':
+                return view('vCards.demo6', compact('profile'));
                 break;
-            case '3':
-                return view('vCards.demo3', compact('profile'));
+            case 'animal':
+                return view('vCards.demo7', compact('profile'));
                 break;
         }
 
-        return view('vCards.demo3', compact('profile'));
+        // return view('vCards.demo6', compact('profile'));
     }
 
     public function displayProfile($token)

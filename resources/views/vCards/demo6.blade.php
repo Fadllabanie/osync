@@ -5,25 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Child</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
-            color: #6F8BA4;
+            /* color: #6F8BA4; */
+            background-image: url({{ asset('childbg.jpg') }});
+            background-repeat: no-repeat;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .section {
             padding: 100px 0;
             position: relative;
+
         }
 
         .gray-bg {
-            background-color: #f5f5f5;
+            /* background-color: #f5f5f5; */
+        }
+
+        .fas {
+            margin-right: 10px
         }
 
         img {
             max-width: 100%;
+            /* box-shadow: 10px 10px 5px gray; */
+            border: 2px solid #fff;
+            -moz-box-shadow: 10px 10px 5px #ccc;
+            -webkit-box-shadow: 10px 10px 5px #ccc;
+            box-shadow: 10px 10px 5px #ccc;
+            -moz-border-radius: 25px;
+            -webkit-border-radius: 25px;
+            border-radius: 25px;
+
         }
 
         img {
@@ -82,7 +105,7 @@
             position: relative;
         }
 
-        .about-list label:after {
+        /* .about-list label:after {
             content: "";
             position: absolute;
             top: 0;
@@ -98,11 +121,19 @@
             transform: rotate(15deg);
             margin: auto;
             opacity: 0.5;
-        }
+        } */
 
         .about-list p {
             margin: 0;
-            font-size: 15px;
+            font-size: 20px;
+        }
+
+        .link {
+            color: inherit;
+            /* blue colors for links too */
+            text-decoration: inherit;
+            /* no underline */
+
         }
 
         @media (max-width: 991px) {
@@ -160,58 +191,72 @@
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6">
                     <div class="about-text go-to">
-                        <h3 class="dark-color">About Me</h3>
-                        <h6 class="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
-                        <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in
+                        <h3 class="dark-color">{{ $profile->fullName() }}</h3>
+                        <h6 class="theme-color lead">{{ $profile->nike_name }}</h6>
+                        {{-- <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in
                             creating stylish, modern websites, web services and online stores. My passion is to design
-                            digital user experiences through the bold interface and meaningful interactions.</p>
+                            digital user experiences through the bold interface and meaningful interactions.</p> --}}
                         <div class="row about-list">
                             <div class="col-md-6">
                                 <div class="media">
                                     <label>Birthday</label>
-                                    <p>4th april 1998</p>
+                                    <p><i class="fas fa-birthday-cake mr-2"></i>{{ $profile->birthday }}</p>
                                 </div>
                                 <div class="media">
                                     <label>Age</label>
-                                    <p>22 Yr</p>
+                                    <p><i class="fas far fa-user-circle mr-2"></i>{{ $profile->age() }}</p>
                                 </div>
                                 <div class="media">
-                                    <label>Residence</label>
-                                    <p>Canada</p>
+                                    <label>Phone</label>
+                                    <p><i class="fas fa-phone-alt mr-2"></i><a
+                                            class="link"href="tel:>{{ $profile->mobile }}">{{ $profile->mobile }}</a>
+                                    </p>
                                 </div>
                                 <div class="media">
-                                    <label>Address</label>
-                                    <p>California, USA</p>
+                                    <label>School</label>
+                                    <p><i class="fas fa-school mr-2"></i><a
+                                            class="link"href="http://maps.google.com/?q=1200 {{ $profile->school_address }}"
+                                            target="_blank">{{ $profile->school_address }}</a></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="media">
-                                    <label>E-mail</label>
-                                    <p>info@domain.com</p>
+                                    <label>Blood</label>
+                                    <p><i class="fas fa-solid fa-droplet"></i>{{ $profile->blood_type }}</p>
                                 </div>
                                 <div class="media">
                                     <label>Phone</label>
-                                    <p>820-885-3321</p>
+                                    <p><i class="fas fa-phone-alt mr-2"></i><a
+                                            class="link"href="tel:>{{ $profile->home_phone }}">{{ $profile->home_phone }}</a>
+                                    </p>
                                 </div>
                                 <div class="media">
-                                    <label>Skype</label>
-                                    <p>skype.0404</p>
+                                    <label>Mobile</label>
+                                    <p><i class="fas fa-mobile-alt mr-2"></i><a
+                                            class="link"href="tel:>{{ $profile->mobile }}">{{ $profile->mobile }}</a>
+                                    </p>
                                 </div>
+
                                 <div class="media">
-                                    <label>Freelance</label>
-                                    <p>Available</p>
+                                    <label>Home</label>
+                                    <p><i class="fas fa-home mr-2"></i><a
+                                            class="link"href="http://maps.google.com/?q=1200 {{ $profile->home_address }}"
+                                            target="_blank">{{ $profile->home_address }}</a></p>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-avatar">
+                        {{-- <img src="{{ asset($profile->avatar) ?? 'https://bootdey.com/img/Content/avatar/avatar7.png' }}"
+                            title="" alt=""> --}}
                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="">
                     </div>
                 </div>
             </div>
-            <div class="counter">
+            {{-- <div class="counter">
                 <div class="row">
                     <div class="col-6 col-lg-3">
                         <div class="count-data text-center">
@@ -238,7 +283,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 </body>

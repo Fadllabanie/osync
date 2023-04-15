@@ -2,8 +2,7 @@
 
 namespace App\Http\Services;
 
-use App\Models\Child;
-use App\Models\Animal;
+use App\Models\Card;
 use App\Models\Profile;
 use Illuminate\Support\Facades\DB;
 
@@ -53,13 +52,13 @@ class ClientService
      */
     public static function adultUpdate($data)
     {
-       
+
         $profile = Profile::create(
             [
                 'user_id' => 1,
                 'type' => 'adult',
                 'category_id' => $data['category_id'],
-            'card_id' => $data['card_id'],
+                'card_id' => $data['card_id'],
                 'code' => generateRandomCode('chd'),
                 'prefix' => $data['prefix'],
                 'first_name' => $data['first_name'],
@@ -111,6 +110,9 @@ class ClientService
             'school_address' => $data['school_address'],
             'status' => true,
         ]);
+
+        Card::where('id', $data['card_id'])->update('client_id', 1);
+
         return $child;
     }
     /**

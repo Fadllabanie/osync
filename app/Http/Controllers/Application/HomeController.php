@@ -40,7 +40,9 @@ class HomeController extends Controller
 
         $code = '4444';
 
-        Mail::to($request->email)->send(new NewClientMail($this->name, $code));
+        if(env('APP_ENV') != 'local'){
+            Mail::to($request->email)->send(new NewClientMail($request->name, $code));
+        }
 
         return redirect()->route('home');
     }

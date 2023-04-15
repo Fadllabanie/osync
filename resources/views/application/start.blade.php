@@ -33,7 +33,7 @@
                                             <input type="text" name="code" id="code" placeholder="Your Code"
                                                 required>
 
-                                                @if($errors->has('code'))
+                                            @if ($errors->has('code'))
                                                 <div class="text-danger">{{ $errors->first('code') }}</div>
                                             @endif
                                         </fieldset>

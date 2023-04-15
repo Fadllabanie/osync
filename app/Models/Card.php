@@ -11,7 +11,7 @@ class Card extends Model
     use HasFactory;
 
     protected $fillable = [
-        'token', 'code','client_id', 'name', 'category_id', 'subcategory_id',
+        'token', 'code', 'client_id', 'name', 'category_id', 'subcategory_id',
         'admin_id', 'manger_id', 'origin_id', 'status', 'note'
     ];
 

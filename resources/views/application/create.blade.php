@@ -3,7 +3,7 @@
 @section('conent')
     <div id="services" class="services section">
         <div class="container">
-           
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
