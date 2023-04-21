@@ -9,5 +9,5 @@ Route::get('/start/{card_token}', [ClientController::class, 'start'])->name('cli
 Route::post('check-code', [ClientController::class, 'check'])->name('client.check');
 Route::post('/create-profile', [ClientController::class, 'updateOrCreate'])->name('home.profile.update');
 Route::get('profile', [ClientController::class, 'show'])->name('home.profile.show');
-Route::get('profile/{code}', [ClientController::class, 'display'])->name('home.profile.display');
+Route::get('profile/{uuid}', [ClientController::class, 'displayProfile'])->name('home.profile.display');
 

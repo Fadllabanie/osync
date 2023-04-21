@@ -1,13 +1,13 @@
     <div>
         <div class="thumb">
             <div class="row">
-                <form id="contact" action="{{ route('home.profile.update')}}" method="POST"
+                <form id="contact" action="{{ route('home.profile.update') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <input class="form-control" type="hidden" name="profile_type" value="animal">
-                    <input class="form-control" type="hidden" name="card_id" value="{{$card->id}}">
-                    <input class="form-control" type="hidden" name="category_id" value="{{$card->category_id}}">
-    
+                    <input class="form-control" type="hidden" name="card_id" value="{{ $card->id }}">
+                    <input class="form-control" type="hidden" name="category_id" value="{{ $card->category_id }}">
+
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="contact-dec">
@@ -26,9 +26,19 @@
                                     <div class="col-lg-12">
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                <input type="text" field='anima_type' name="anima_type"
-                                                    id="anima_type" placeholder="anima type dog - cat .. etc" required
-                                                    value="{{ $profile->anima_type ?? '' }}" />
+                                                <select name="animal_type">
+                                                    <option selected disabled>
+                                                        {{ __('Kind') }}
+                                                    </option>
+                                                    <option value="dog">{{ __('Dog') }}
+                                                    </option>
+                                                    <option value="cat">
+                                                        {{ __('Cat') }}</option>
+                                                </select>
+
+                                                {{-- <input type="text" field='animal_type' name="animal_type"
+                                                    id="animal_type" placeholder="animal_type type dog - cat .. etc"
+                                                    required value="{{ $profile->animal_type ?? '' }}" /> --}}
                                             </div>
                                             <div class="col-lg-6">
                                                 <input type="text" field='name' name="name" id="name"
@@ -45,8 +55,8 @@
                                                     value="{{ $profile->home_phone ?? '' }}" />
                                             </div>
                                             <div class="col-lg-6">
-                                                <input type="tel" field='mobile' name="mobile"
-                                                    id="mobile" placeholder="First owner mobile" required
+                                                <input type="tel" field='mobile' name="mobile" id="mobile"
+                                                    placeholder="First owner mobile" required
                                                     value="{{ $profile->mobile ?? '' }}" />
                                             </div>
                                         </div>
@@ -64,6 +74,15 @@
                                                     <option value="2">
                                                         {{ __('Female') }}</option>
                                                 </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <input type="tel" field='text' name="home_address" id="home_address"
+                                                    placeholder="home address" required
+                                                    value="{{ $profile->home_address ?? '' }}" />
                                             </div>
                                         </div>
                                     </div>

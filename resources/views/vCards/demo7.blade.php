@@ -197,6 +197,18 @@
                                     <p><i class="fas fa-transgender	mr-2"></i>{{ $profile->gender() }}</p>
                                 </div>
                                 <div class="media">
+                                    <label>Kind</label>
+                                    <p>
+                                        @if ($profile->animal_type == 'dog')
+                                            <i class="fas fa-dog mr-2"></i>
+                                        @else
+                                            <i class="fas fa-cat mr-2"></i>
+                                        @endif
+
+                                        {{ $profile->animal_type }}
+                                    </p>
+                                </div>
+                                <div class="media">
                                     <label>Home</label>
                                     <p><i class="fas fa-home mr-2"></i><a
                                             class="link"href="http://maps.google.com/?q=1200 {{ $profile->home_address }}"
@@ -209,9 +221,9 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="about-avatar">
-                        {{-- <img src="{{ asset($profile->avatar) ?? 'https://bootdey.com/img/Content/avatar/avatar7.png' }}"
-                            title="" alt=""> --}}
-                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt="">
+                        <img src="{{ asset($profile->avatar) ?? 'https://bootdey.com/img/Content/avatar/avatar7.png' }}"
+                            title="" alt="">
+                        {{-- <img src="https://bootdey.com/img/Content/avatar/avatar7.png" title="" alt=""> --}}
                     </div>
                 </div>
             </div>

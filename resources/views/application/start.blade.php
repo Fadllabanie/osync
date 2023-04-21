@@ -30,8 +30,8 @@
                                                 value="{{ Request::segment(3) }}">
                                         </fieldset>
                                         <fieldset>
-                                            <input type="text" name="code" id="code" placeholder="Your Code"
-                                                required>
+                                            <Label>Card Code</Label>
+                                            <input type="text" name="code" id="code" placeholder="pro-" required>
 
                                             @if ($errors->has('code'))
                                                 <div class="text-danger">{{ $errors->first('code') }}</div>

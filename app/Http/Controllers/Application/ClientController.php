@@ -43,7 +43,7 @@ class ClientController extends Controller
     public function show()
     {
         $profile = Profile::where('id', 1)->first();
-        $card =  Card::where('category_id', $profile->category_id)->firstOrFail();
+        // $card =  Card::where('card_id', $profile->card_id)->firstOrFail();
 
         ## check <----
 
@@ -74,21 +74,24 @@ class ClientController extends Controller
         // return view('vCards.demo6', compact('profile'));
     }
 
-    public function displayProfile($token)
+    public function displayProfile($uuid)
     {
-        $card =  Card::where('token', $token)->firstOrFail();
-        $profile = Profile::where('card_id', $card->id)->first();
-
-        switch ($card->category_id) {
-            case '1':
-                return view('vCards.demo2', compact('profile'));
+       
+        $profile = Profile::where('uuid', $uuid)->first();
+       
+        // $card =  Card::where('id', $profile->card_id)->first();
+       
+        switch ($profile->type) {
+            case 'adult':
+                return view('vCards.demo1', compact('profile'));
                 break;
-            case '2':
-                return view('vCards.demo3', compact('profile'));
+            case 'child':
+                return view('vCards.demo6', compact('profile'));
                 break;
-            case '3':
-                return view('vCards.demo3', compact('profile'));
+            case 'animal':
+                return view('vCards.demo7', compact('profile'));
                 break;
         }
+
     }
 }

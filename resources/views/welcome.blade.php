@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>E-Touch</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('application/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -56,7 +56,7 @@
                     <ul class="social-media">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-instgram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="{{route('home')}}" class="logo">
+                        <a href="{{ route('home') }}" class="logo">
                             <img src="{{ asset('logo1.jpg') }}" width="30px" height="125px" alt="">
                         </a>
                         <!-- ***** Logo End ***** -->
@@ -123,7 +123,8 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                                <img src="{{ asset('application/assets/images/slider-dec-v3.png') }}" alt="">
+                                <img src="{{ asset('home1-removebg-preview.png') }}" alt="">
+                                ]
                             </div>
                         </div>
                     </div>
@@ -186,41 +187,25 @@
                                         <div class="first-thumb active">
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('application/assets/images/service-icon-01.png') }}"
+                                                        src="{{ asset('undraw_windy_day_x-63-l.svg') }}"
                                                         alt=""></span>
-                                                Apartments
+                                                Adult
                                             </div>
                                         </div>
                                         <div>
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('application/assets/images/service-icon-02.png') }}"
+                                                        src="{{ asset('undraw_true_friends_c-94-g (1).svg') }}"
                                                         alt=""></span>
-                                                Food &amp; Life
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumb">
-                                                <span class="icon"><img
-                                                        src="{{ asset('application/assets/images/service-icon-03.png') }}"
-                                                        alt=""></span>
-                                                Cars
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="thumb">
-                                                <span class="icon"><img
-                                                        src="{{ asset('application/assets/images/service-icon-04.png') }}"
-                                                        alt=""></span>
-                                                Shopping
+                                                Children
                                             </div>
                                         </div>
                                         <div class="last-thumb">
                                             <div class="thumb">
                                                 <span class="icon"><img
-                                                        src="{{ asset('application/assets/images/service-icon-01.png') }}"
+                                                        src="{{ asset('undraw_good_doggy_re_eet7.svg') }}"
                                                         alt=""></span>
-                                                Traveling
+                                                Pets
                                             </div>
                                         </div>
                                     </div>
@@ -294,80 +279,6 @@
                                                         <div class="col-lg-6 align-self-center">
                                                             <div class="right-image">
                                                                 <img src="{{ asset('application/assets/images/services-image-02.jpg') }}"
-                                                                    alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div>
-                                                <div class="thumb">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 align-self-center">
-                                                            <div class="left-text">
-                                                                <h4>Car Re-search &amp; Transport</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                    elit, sedr do eiusmod deis tempor incididunt ut
-                                                                    labore et dolore kengan darwin doerski token.
-                                                                    dover lipsum lorem and the others.</p>
-                                                                <div class="ticks-list"><span><i
-                                                                            class="fa fa-check"></i> Optimized
-                                                                        Template</span> <span><i
-                                                                            class="fa fa-check"></i> Data Info</span>
-                                                                    <span><i class="fa fa-check"></i> SEO
-                                                                        Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Data Info</span>
-                                                                    <span><i class="fa fa-check"></i> SEO
-                                                                        Analysis</span> <span><i
-                                                                            class="fa fa-check"></i> Optimized
-                                                                        Template</span>
-                                                                </div>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                    elit, sedr do eiusmod deis tempor incididunt.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 align-self-center">
-                                                            <div class="right-image">
-                                                                <img src="{{ asset('application/assets/images/services-image-03.jpg') }}"
-                                                                    alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div>
-                                                <div class="thumb">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 align-self-center">
-                                                            <div class="left-text">
-                                                                <h4>Online Shopping &amp; Tracking ID</h4>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                    elit, sedr do eiusmod deis tempor incididunt ut
-                                                                    labore et dolore kengan darwin doerski token.
-                                                                    dover lipsum lorem and the others.</p>
-                                                                <div class="ticks-list"><span><i
-                                                                            class="fa fa-check"></i> Optimized
-                                                                        Template</span> <span><i
-                                                                            class="fa fa-check"></i> Data Info</span>
-                                                                    <span><i class="fa fa-check"></i> SEO
-                                                                        Analysis</span>
-                                                                    <span><i class="fa fa-check"></i> Data Info</span>
-                                                                    <span><i class="fa fa-check"></i> SEO
-                                                                        Analysis</span> <span><i
-                                                                            class="fa fa-check"></i> Optimized
-                                                                        Template</span>
-                                                                </div>
-                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                    elit, sedr do eiusmod deis tempor incididunt.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 align-self-center">
-                                                            <div class="right-image">
-                                                                <img src="{{ asset('application/assets/images/services-image-04.jpg') }}"
                                                                     alt="">
                                                             </div>
                                                         </div>

@@ -81,6 +81,9 @@ class ClientService
                 'status' => true,
             ]
         );
+
+        Card::where('id', $data['card_id'])->update('client_id', 1);
+
         return $profile;
     }
 
@@ -132,14 +135,18 @@ class ClientService
             'card_id' => $data['card_id'],
 
             'first_name' => $data['name'],
-            'anima_type' => $data['anima_type'],  # family - dog - cat - etc 
+            'animal_type' => $data['animal_type'],  # family - dog - cat - etc 
             'home_phone' => $data['home_phone'],
             'owner_mobile' => $data['mobile'],
             'avatar' => upload($data['avatar'], 'animals'),
             'code' => generateRandomCode('anm'),
             'gender' => $data['gender'],
+            'home_address' => $data['home_address'],
             'status' => true,
         ]);
+
+        Card::where('id', $data['card_id'])->update('client_id', 1);
+
 
         return $user;
     }

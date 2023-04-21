@@ -19,7 +19,7 @@ class Profile extends Model
     //     'work_mobile', 'work_email', 'role','display_links','display_fields',
     //     'organization_address', 'organization_url', 'organization','industrie_id',
     //     'avatar', 'email', 'gender','cover','is_default',
-    //     'birthday', 'mobile', 'home_phone','prefix',
+    //     'birthday', 'mobile', 'home_phone','prefix','uuid'
     //     'nike_name', 'last_name', 'middle_name','from_cooperate',
     //     'first_name', 'code', 'user_id','status','admin_id'
     // ];

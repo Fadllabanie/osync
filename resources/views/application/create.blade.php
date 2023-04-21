@@ -3,7 +3,7 @@
 @section('conent')
     <div id="services" class="services section">
         <div class="container">
-
+           
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -26,8 +26,8 @@
                                             <div class="first-thumb active">
                                                 <div class="thumb">
                                                     <span class="icon"><img
-                                                            src="{{ asset('application/assets/images/service-icon-01.png') }}"
-                                                            alt=""></span>
+                                                        src="{{ asset('undraw_windy_day_x-63-l.svg') }}"
+                                                        alt=""></span>
                                                     ADULT
                                                 </div>
                                             </div>
@@ -35,8 +35,8 @@
                                             <div>
                                                 <div class="thumb active">
                                                     <span class="icon"><img
-                                                            src="{{ asset('application/assets/images/service-icon-04.png') }}"
-                                                            alt=""></span>
+                                                        src="{{ asset('undraw_true_friends_c-94-g (1).svg') }}"
+                                                        alt=""></span>
                                                     CHILD
                                                 </div>
                                             </div>
@@ -44,14 +44,12 @@
                                             <div class="last-thumb active">
                                                 <div class="thumb">
                                                     <span class="icon"><img
-                                                            src="{{ asset('application/assets/images/service-icon-01.png') }}"
-                                                            alt=""></span>
+                                                        src="{{ asset('undraw_good_doggy_re_eet7.svg') }}"
+                                                        alt=""></span>
                                                     ANIMAL
                                                 </div>
                                             </div>
                                         @endif
-
-
                                     </div>
                                 </div>
                                 <div class="col-lg-12">

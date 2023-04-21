@@ -7,41 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    {{ csrf_field() }}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-    <title>E-Touch</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Bootstrap core CSS -->
+    <link href="{{ asset('application/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{ asset('application/assets/css/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('application/assets/css/templatemo-digimedia-v3.css') }}">
     <link rel="stylesheet" href="{{ asset('application/assets/css/animated.css') }}">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('application/assets/css/owl.css') }}">
 
 </head>
 
 <body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
+
+    {{-- <!-- ***** Preloader Start ***** -->
+        <div id="js-preloader" class="js-preloader">
+            <div class="preloader-inner">
+                <span class="dot"></span>
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
+        <!-- ***** Preloader End ***** --> --}}
 
     <!-- Pre-header Starts -->
     <div class="pre-header">
@@ -65,7 +65,8 @@
     </div>
     <!-- Pre-header End -->
 
-    <div>
+    <div id="contact" class="contact-us section">
+
 
         @yield('conent')
 
@@ -82,7 +83,7 @@
     </footer>
 
 
-   
+
     <script src="{{ asset('application/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('application/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('application/assets/js/owl-carousel.js') }}"></script>

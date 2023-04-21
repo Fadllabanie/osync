@@ -1,5 +1,5 @@
 <base href="">
-<title>{{config('app.name') }} | @yield('title')</title>
+<title>{{ config('app.name') }} | @yield('title')</title>
 <meta name="description"
     content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
 <meta name="keywords"
@@ -18,12 +18,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 <!--end::Fonts-->
 <!--begin::Page Vendor Stylesheets(used by this page)-->
-<link href="{{asset('dashboard/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css')}}" rel="stylesheet"
+<link href="{{ asset('dashboard/assets/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet"
     type="text/css" />
 <!--end::Page Vendor Stylesheets-->
 <!--begin::Global Stylesheets Bundle(used by all pages)-->
-<link href="{{asset('dashboard/assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{asset('dashboard/assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('dashboard/assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('dashboard/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 <!--end::Global Stylesheets Bundle-->
 
 
@@ -31,5 +31,5 @@
 
 @livewireStyles
 <style>
-  
+
 </style>
